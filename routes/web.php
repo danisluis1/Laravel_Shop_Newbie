@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () { return view('welcome'); });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
-Route::get('template', ['as' => 'template','uses' => 'MasterController@index']);
+Route::get('template', ['as' => 'template', 'uses' => 'MasterController@index']);
 Route::get('trang-chu', [
     'as' => 'trang-chu',
     'uses' => 'PageController@getIndex'
@@ -29,5 +31,9 @@ Route::get('chi-tiet-san-pham', [
 ]);
 Route::get('lien-he', [
     'as' => 'lien-he',
-    'uses'  => 'PageController@getLienHe'
+    'uses' => 'PageController@getLienHe'
+]);
+Route::get('dang-ky', [
+    'as' => 'dang-ky',
+    'uses'  => 'PageController@getDangKy'
 ]);

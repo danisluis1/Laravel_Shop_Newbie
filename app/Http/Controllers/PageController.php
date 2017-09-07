@@ -23,4 +23,9 @@ class PageController extends Controller
     {
         return view('page.lien_he');
     }
+
+    public function getDangKy()
+    {
+        return view('page.dang_ky');
+    }
 }
