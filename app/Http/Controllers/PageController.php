@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Slide;
+
 class PageController extends Controller
 {
     public function getIndex()
     {
-        return view('page.trang_chu');
+        if (!isset($slides)) {
+            $slides = Slide::all();
+            return view('page.trang_chu', compact('slides'));
+        }
     }
 
     public function getLoaiSanPham()
