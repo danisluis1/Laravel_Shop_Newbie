@@ -37,3 +37,4 @@ Route::get('dang-ky', [
     'as' => 'dang-ky',
     'uses'  => 'PageController@getDangKy'
 ]);
+
