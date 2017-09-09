@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\Slide;
 
 class PageController extends Controller
@@ -10,7 +11,9 @@ class PageController extends Controller
     {
         if (!isset($slides)) {
             $slides = Slide::all();
-            return view('page.trang_chu', compact('slides'));
+            $new_product = Product::where('new',1)->paginate(4);
+            $top_product = Product::where('new',0)->paginate(8);
+            return view('page.trang_chu', compact('slides','new_product','top_product'));
         }
     }
 

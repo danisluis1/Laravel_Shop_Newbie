@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\ProductType;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('inc.header',function ($view) {
+            $loai_san_pham = ProductType::all();
+            $view->with('loai_san_pham', $loai_san_pham);
+        });
     }
 
     /**
