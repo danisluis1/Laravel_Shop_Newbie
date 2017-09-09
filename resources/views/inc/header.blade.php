@@ -102,12 +102,12 @@
                     <li><a href="#">Sản phẩm</a>
                         <ul class="sub-menu">
                             @foreach($loai_san_pham as $_loai_san_pham)
-                            <li><a href="{{ route('loai-san-pham }}">{{ $_loai_san_pham->name }}</a></li>
+                            <li><a href="{{ route('loai-san-pham', $_loai_san_pham->id) }}">{{ $_loai_san_pham->name }}</a></li>
                             @endforeach
                         </ul>
                     </li>
                     <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="{{ route('lien-he') }}">Liên hệ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
                 </ul>
                 <div class="clearfix"></div>
             </nav>

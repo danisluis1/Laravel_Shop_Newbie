@@ -21,7 +21,7 @@ Route::get('trang-chu', [
     'as' => 'trang-chu',
     'uses' => 'PageController@getIndex'
 ]);
-Route::get('loai-san-pham', [
+Route::get('loai-san-pham/{_id_type_product}', [
     'as' => 'loai-san-pham',
     'uses' => 'PageController@getLoaiSanPham'
 ]);
